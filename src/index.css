@@ -1,0 +1,294 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: 'Tajawal', 'Inter', sans-serif;
+}
+
+body {
+  direction: rtl;
+  background-color: #0D1117;
+  color: #FFFFFF;
+}
+
+/* Status Colors */
+.status-green {
+  @apply bg-green-500 text-white;
+  background-color: #22C55E;
+}
+
+.status-yellow {
+  @apply bg-yellow-500 text-black;
+  background-color: #FACC15;
+}
+
+.status-red {
+  @apply bg-red-500 text-white;
+  background-color: #EF4444;
+}
+
+/* Glow Effects */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 207, 255, 0.3);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(0, 155, 235, 0.4);
+}
+
+.glow-green {
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.3);
+}
+
+.glow-red {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+}
+
+.glow-yellow {
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.3);
+}
+
+/* Aircraft Cards */
+.aircraft-card {
+  @apply rounded-2xl p-6 transition-all duration-300 border;
+  background: linear-gradient(145deg, rgba(22, 27, 34, 0.8), rgba(33, 38, 45, 0.6));
+  border: 1px solid rgba(139, 148, 158, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.aircraft-card:hover {
+  @apply transform scale-105;
+  border-color: #00CFFF;
+  box-shadow: 0 0 30px rgba(0, 207, 255, 0.2);
+}
+
+/* Buttons */
+.btn-primary {
+  @apply text-white px-6 py-3 rounded-xl font-bold transition-all duration-300;
+  background: linear-gradient(135deg, #009BEB, #00CFFF);
+  box-shadow: 0 0 20px rgba(0, 155, 235, 0.4);
+}
+
+.btn-primary:hover {
+  @apply transform scale-105;
+  box-shadow: 0 0 30px rgba(0, 207, 255, 0.6);
+}
+
+.btn-secondary {
+  @apply text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 border;
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid rgba(139, 148, 158, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  @apply transform scale-105;
+  border-color: #00CFFF;
+  box-shadow: 0 0 20px rgba(0, 207, 255, 0.2);
+}
+
+/* Sidebar */
+.sidebar-item {
+  @apply flex items-center gap-3 p-4 rounded-xl transition-all duration-300 cursor-pointer;
+  background: rgba(22, 27, 34, 0.6);
+  border: 1px solid transparent;
+}
+
+.sidebar-item:hover {
+  background: rgba(33, 38, 45, 0.8);
+  border-color: rgba(0, 207, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 207, 255, 0.1);
+}
+
+.sidebar-item.active {
+  background: linear-gradient(135deg, rgba(0, 155, 235, 0.2), rgba(0, 207, 255, 0.1));
+  border-color: #00CFFF;
+  color: #00CFFF;
+  box-shadow: 0 0 20px rgba(0, 207, 255, 0.3);
+}
+
+/* Cards */
+.glass-card {
+  background: linear-gradient(145deg, rgba(22, 27, 34, 0.8), rgba(33, 38, 45, 0.6));
+  border: 1px solid rgba(139, 148, 158, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 1rem;
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 207, 255, 0.4);
+  box-shadow: 0 0 25px rgba(0, 207, 255, 0.1);
+}
+
+/* Stats Cards */
+.stat-card {
+  @apply rounded-2xl p-6 transition-all duration-300;
+  background: linear-gradient(145deg, rgba(22, 27, 34, 0.9), rgba(33, 38, 45, 0.7));
+  border: 1px solid rgba(139, 148, 158, 0.2);
+  backdrop-filter: blur(15px);
+}
+
+.stat-card:hover {
+  @apply transform scale-105;
+  border-color: rgba(0, 207, 255, 0.4);
+  box-shadow: 0 0 30px rgba(0, 207, 255, 0.15);
+}
+
+/* Input Fields */
+.input-field {
+  @apply px-4 py-3 rounded-xl text-white placeholder-gray-400 border transition-all duration-300;
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid rgba(139, 148, 158, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #00CFFF;
+  box-shadow: 0 0 20px rgba(0, 207, 255, 0.2);
+}
+
+/* Tables */
+.table-header {
+  background: linear-gradient(135deg, rgba(22, 27, 34, 0.9), rgba(33, 38, 45, 0.8));
+  border-bottom: 1px solid rgba(0, 207, 255, 0.2);
+}
+
+.table-row {
+  @apply transition-all duration-300;
+  background: rgba(22, 27, 34, 0.4);
+  border-bottom: 1px solid rgba(139, 148, 158, 0.1);
+}
+
+.table-row:hover {
+  background: rgba(33, 38, 45, 0.6);
+  box-shadow: 0 0 15px rgba(0, 207, 255, 0.1);
+}
+
+/* Progress Bars */
+.progress-bar {
+  @apply rounded-full overflow-hidden;
+  background: rgba(139, 148, 158, 0.2);
+}
+
+.progress-fill {
+  @apply h-full rounded-full transition-all duration-500;
+  background: linear-gradient(90deg, #009BEB, #00CFFF);
+  box-shadow: 0 0 10px rgba(0, 207, 255, 0.4);
+}
+
+/* Leaflet Dark Mode Styles */
+.leaflet-container {
+  background-color: #0D1117 !important;
+}
+
+.leaflet-control-zoom a {
+  background: linear-gradient(145deg, rgba(22, 27, 34, 0.9), rgba(33, 38, 45, 0.8)) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(139, 148, 158, 0.3) !important;
+  backdrop-filter: blur(10px);
+}
+
+.leaflet-control-zoom a:hover {
+  border-color: #00CFFF !important;
+  box-shadow: 0 0 15px rgba(0, 207, 255, 0.3) !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(22, 27, 34, 0.9) !important;
+  color: #C9D1D9 !important;
+  backdrop-filter: blur(10px);
+}
+
+.leaflet-control-attribution a {
+  color: #00CFFF !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: linear-gradient(145deg, rgba(22, 27, 34, 0.95), rgba(33, 38, 45, 0.9)) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(0, 207, 255, 0.3) !important;
+  backdrop-filter: blur(15px);
+  border-radius: 12px !important;
+}
+
+.leaflet-popup-tip {
+  background: rgba(22, 27, 34, 0.95) !important;
+}
+
+.leaflet-popup-close-button {
+  color: #FFFFFF !important;
+}
+
+.aircraft-marker {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(22, 27, 34, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #009BEB, #00CFFF);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #00CFFF, #009BEB);
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 207, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 207, 255, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Text Colors */
+.text-primary {
+  color: #FFFFFF;
+}
+
+.text-secondary {
+  color: #C9D1D9;
+}
+
+.text-accent {
+  color: #8B949E;
+}
+
+.text-highlight {
+  color: #00CFFF;
+}
+
+/* Background Colors */
+.bg-primary {
+  background-color: #0D1117;
+}
+
+.bg-secondary {
+  background: linear-gradient(145deg, rgba(22, 27, 34, 0.8), rgba(33, 38, 45, 0.6));
+}
+
+.bg-card {
+  background: linear-gradient(145deg, rgba(22, 27, 34, 0.9), rgba(33, 38, 45, 0.7));
+}
